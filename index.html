@@ -3,56 +3,91 @@
 <head>
   <meta charset="utf-8">
   <title>Egor</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Sacramento|Poppins:400,600,700" rel="stylesheet">
-  <link rel="icon" href="favicon.ico">
   <style>
-    /* Добавляем относительное позиционирование для контейнера */
-    .top-container {
-      position: relative;
+    /* Сброс стилей */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    /* Стили для верхнего облака */
+    /* Стили для верхнего контейнера */
+    .top-container {
+      background-color: #E4F9F5;
+      position: relative;
+      padding-top: 100px;
+      height: 100vh;
+      text-align: center;
+    }
+
+    /* Стили для верхнего облака - слева вверху */
     .top-cloud {
       position: absolute;
       top: 50px;
-      left: 200px;
+      left: 300px;
+      width: 200px;
     }
 
-    /* Стили для нижнего облака */
+    /* Стили для нижнего облака - справа внизу */
     .bottom-cloud {
       position: absolute;
-      bottom: 300px;
-      right: 200px;
+      bottom: 350px;
+      right: 300px;
+      width: 200px;
     }
 
-    /* Применяем шрифт Poppins к различным элементам */
-    body {
-      font-family: 'Poppins', sans-serif;
+    /* Стили для горы */
+    .mountain {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50%;
+      max-width: 600px;
     }
-    
-    /* Шрифт Sacramento для имени Egor */
+
+    /* Стили для текста */
+    .title-text {
+      position: relative;
+      z-index: 1;
+      padding-top: 100px;
+    }
+
+    /* Шрифт Sacramento для имени */
     .title-text h1 {
       font-family: 'Sacramento', cursive;
       font-size: 5.625rem;
-      margin: 50px auto 0 auto;
+      margin: 0 auto;
       color: #66BFBF;
     }
-    
-    h2 {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600; /* Полужирное начертание */
+
+    .title-text h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      color: #66BFBF;
+      font-weight: normal;
+      margin-top: 10px;
     }
-    
-    h3 {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
-    }
-    
+
     .pro {
-      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    /* Остальные стили */
+    body {
+      margin: 0;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    /* Убираем возможные внешние стили */
+    .middle-container, .bottom-container {
+      margin: 0;
+      padding: 0;
     }
   </style>
+  <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Sacramento|Poppins:400,600,700" rel="stylesheet">
+  <link rel="icon" href="favicon.ico">
 </head>
 
 <body>
@@ -98,7 +133,6 @@
       <a class="btn" href="mailto:ilove@hotwings.com">CONTACT ME</a>
     </div>
   </div>
-
 
   <div class="bottom-container">
     <a class="footer-link" href="https://www.linkedin.com/in/angela-yu-963a584b/">LinkedIn</a>
